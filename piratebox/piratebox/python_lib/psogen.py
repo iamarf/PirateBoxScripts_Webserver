@@ -12,6 +12,8 @@ import messages, broadcast
 
 datafilename = os.environ["SHOUTBOX_CHATFILE"]
 htmlfilename = os.environ["SHOUTBOX_GEN_HTMLFILE"]
+usbchat = os.environ["SHOUTBOX_USB_CHAT"]
+usbfilename = os.environ["SHOUTBOX_USB_CHATFILE"]
 
 try:
      raw_dest =  os.environ["SHOUTBOX_BROADCAST_DESTINATIONS"]
@@ -43,6 +45,11 @@ def generate_html_into_file(content):
     htmlfile = open( htmlfilename , 'w' )
     htmlfile.write( htmlstring )
     htmlfile.close()
+
+    if usbchat == "yes"
+        htmlfile = open( usbfilename , 'w' )
+        htmlfile.write( htmlstring )
+        htmlfile.close()
 
 #--------------
 # Generates HTML Data based on datafilename 's content 

@@ -18,7 +18,8 @@ cd python_lib
 
 export SHOUTBOX_CHATFILE=$CHATFILE
 export SHOUTBOX_GEN_HTMLFILE=$GEN_CHATFILE
-
+export SHOUTBOX_USB_CHAT=$USB_CHAT
+export SHOUTBOX_USB_CHATFILE=$USB_CHATFILE
 
 #Writing init-message and reset chat..
 if [ "$RESET_CHAT"  = "yes" ] ; then
@@ -32,6 +33,6 @@ python psogen.py generate
 chown $LIGHTTPD_USER:$LIGHTTPD_GROUP $SHOUTBOX_CHATFILE
 chown $LIGHTTPD_USER:$LIGHTTPD_GROUP $SHOUTBOX_GEN_HTMLFILE
 chmod ug+rw  $SHOUTBOX_CHATFILE
-chmod ug+rw  $SHOUTBOX_CHATFILE
+chmod ug+rw  $SHOUTBOX_GEN_HTMLFILE
 
 
